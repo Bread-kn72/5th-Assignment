@@ -9,23 +9,32 @@
 /* Begin PBXBuildFile section */
 		4DB4D2CD2BE9CCDF0018B3B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2CC2BE9CCDF0018B3B0 /* AppDelegate.swift */; };
 		4DB4D2CF2BE9CCDF0018B3B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2CE2BE9CCDF0018B3B0 /* SceneDelegate.swift */; };
-		4DB4D2D12BE9CCDF0018B3B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2D02BE9CCDF0018B3B0 /* ViewController.swift */; };
+		4DB4D2D12BE9CCDF0018B3B0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2D02BE9CCDF0018B3B0 /* SearchViewController.swift */; };
 		4DB4D2D42BE9CCDF0018B3B0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4DB4D2D32BE9CCDF0018B3B0 /* Base */; };
 		4DB4D2D72BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2D52BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodeld */; };
 		4DB4D2D92BE9CCE00018B3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB4D2D82BE9CCE00018B3B0 /* Assets.xcassets */; };
 		4DB4D2DC2BE9CCE00018B3B0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4DB4D2DB2BE9CCE00018B3B0 /* Base */; };
+		4DB4D2E42BE9CD810018B3B0 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2E32BE9CD810018B3B0 /* SearchView.swift */; };
+		4DB4D2E82BE9CD9E0018B3B0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4DB4D2E72BE9CD9E0018B3B0 /* SnapKit */; };
+		4DB4D2EB2BE9CF0C0018B3B0 /* TapbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2EA2BE9CF0C0018B3B0 /* TapbarController.swift */; };
+		4DB4D2ED2BE9F0D20018B3B0 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2EC2BE9F0D20018B3B0 /* BookListViewController.swift */; };
+		4DB4D2EF2BE9F11A0018B3B0 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2EE2BE9F11A0018B3B0 /* BookListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DB4D2C92BE9CCDF0018B3B0 /* 5th Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "5th Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB4D2CC2BE9CCDF0018B3B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB4D2CE2BE9CCDF0018B3B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DB4D2D02BE9CCDF0018B3B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DB4D2D02BE9CCDF0018B3B0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4DB4D2D32BE9CCDF0018B3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DB4D2D62BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _th_Assignment.xcdatamodel; sourceTree = "<group>"; };
 		4DB4D2D82BE9CCE00018B3B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB4D2DB2BE9CCE00018B3B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DB4D2DD2BE9CCE00018B3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB4D2E32BE9CD810018B3B0 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		4DB4D2EA2BE9CF0C0018B3B0 /* TapbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapbarController.swift; sourceTree = "<group>"; };
+		4DB4D2EC2BE9F0D20018B3B0 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		4DB4D2EE2BE9F11A0018B3B0 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB4D2E82BE9CD9E0018B3B0 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +70,8 @@
 			children = (
 				4DB4D2CC2BE9CCDF0018B3B0 /* AppDelegate.swift */,
 				4DB4D2CE2BE9CCDF0018B3B0 /* SceneDelegate.swift */,
-				4DB4D2D02BE9CCDF0018B3B0 /* ViewController.swift */,
+				4DB4D2E92BE9CEF20018B3B0 /* Controller */,
+				4DB4D2E52BE9CD880018B3B0 /* View */,
 				4DB4D2D22BE9CCDF0018B3B0 /* Main.storyboard */,
 				4DB4D2D82BE9CCE00018B3B0 /* Assets.xcassets */,
 				4DB4D2DA2BE9CCE00018B3B0 /* LaunchScreen.storyboard */,
@@ -68,6 +79,25 @@
 				4DB4D2D52BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodeld */,
 			);
 			path = "5th Assignment";
+			sourceTree = "<group>";
+		};
+		4DB4D2E52BE9CD880018B3B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4D2E32BE9CD810018B3B0 /* SearchView.swift */,
+				4DB4D2EE2BE9F11A0018B3B0 /* BookListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DB4D2E92BE9CEF20018B3B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4D2D02BE9CCDF0018B3B0 /* SearchViewController.swift */,
+				4DB4D2EC2BE9F0D20018B3B0 /* BookListViewController.swift */,
+				4DB4D2EA2BE9CF0C0018B3B0 /* TapbarController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +116,9 @@
 			dependencies = (
 			);
 			name = "5th Assignment";
+			packageProductDependencies = (
+				4DB4D2E72BE9CD9E0018B3B0 /* SnapKit */,
+			);
 			productName = "5th Assignment";
 			productReference = 4DB4D2C92BE9CCDF0018B3B0 /* 5th Assignment.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 4DB4D2C02BE9CCDF0018B3B0;
+			packageReferences = (
+				4DB4D2E62BE9CD9E0018B3B0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4DB4D2CA2BE9CCDF0018B3B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,10 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DB4D2D12BE9CCDF0018B3B0 /* ViewController.swift in Sources */,
+				4DB4D2D12BE9CCDF0018B3B0 /* SearchViewController.swift in Sources */,
+				4DB4D2EB2BE9CF0C0018B3B0 /* TapbarController.swift in Sources */,
 				4DB4D2CD2BE9CCDF0018B3B0 /* AppDelegate.swift in Sources */,
 				4DB4D2D72BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodeld in Sources */,
+				4DB4D2E42BE9CD810018B3B0 /* SearchView.swift in Sources */,
 				4DB4D2CF2BE9CCDF0018B3B0 /* SceneDelegate.swift in Sources */,
+				4DB4D2ED2BE9F0D20018B3B0 /* BookListViewController.swift in Sources */,
+				4DB4D2EF2BE9F11A0018B3B0 /* BookListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DB4D2E62BE9CD9E0018B3B0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DB4D2E72BE9CD9E0018B3B0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DB4D2E62BE9CD9E0018B3B0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4DB4D2D52BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodeld */ = {

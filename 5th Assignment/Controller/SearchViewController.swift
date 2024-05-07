@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
 
-    let mainView = MainView()
+    let searchView = SearchView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     
     override func loadView() {
-        view = mainView
+        view = searchView
     }
 
     private func setUI() {
