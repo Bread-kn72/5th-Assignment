@@ -19,6 +19,12 @@
 		4DB4D2EB2BE9CF0C0018B3B0 /* TapbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2EA2BE9CF0C0018B3B0 /* TapbarController.swift */; };
 		4DB4D2ED2BE9F0D20018B3B0 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2EC2BE9F0D20018B3B0 /* BookListViewController.swift */; };
 		4DB4D2EF2BE9F11A0018B3B0 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2EE2BE9F11A0018B3B0 /* BookListView.swift */; };
+		4DB4D2F12BEA31760018B3B0 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2F02BEA31760018B3B0 /* SearchTableViewCell.swift */; };
+		4DB4D2F32BEA341F0018B3B0 /* BookListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2F22BEA341F0018B3B0 /* BookListTableViewCell.swift */; };
+		4DB4D2F52BEA40050018B3B0 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2F42BEA40050018B3B0 /* BookDetailView.swift */; };
+		4DB4D2F82BEA56490018B3B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2F72BEA56490018B3B0 /* NetworkManager.swift */; };
+		4DB4D2FA2BEB20D20018B3B0 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2F92BEB20D20018B3B0 /* BookDetailViewController.swift */; };
+		4DB4D2FC2BEB4AEF0018B3B0 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4D2FB2BEB4AEF0018B3B0 /* BookModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		4DB4D2EA2BE9CF0C0018B3B0 /* TapbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapbarController.swift; sourceTree = "<group>"; };
 		4DB4D2EC2BE9F0D20018B3B0 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
 		4DB4D2EE2BE9F11A0018B3B0 /* BookListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+		4DB4D2F02BEA31760018B3B0 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		4DB4D2F22BEA341F0018B3B0 /* BookListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCell.swift; sourceTree = "<group>"; };
+		4DB4D2F42BEA40050018B3B0 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		4DB4D2F72BEA56490018B3B0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4DB4D2F92BEB20D20018B3B0 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		4DB4D2FB2BEB4AEF0018B3B0 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,8 @@
 				4DB4D2DA2BE9CCE00018B3B0 /* LaunchScreen.storyboard */,
 				4DB4D2DD2BE9CCE00018B3B0 /* Info.plist */,
 				4DB4D2D52BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodeld */,
+				4DB4D2F72BEA56490018B3B0 /* NetworkManager.swift */,
+				4DB4D2FB2BEB4AEF0018B3B0 /* BookModel.swift */,
 			);
 			path = "5th Assignment";
 			sourceTree = "<group>";
@@ -84,8 +98,10 @@
 		4DB4D2E52BE9CD880018B3B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4DB4D2F62BEA449C0018B3B0 /* cell */,
 				4DB4D2E32BE9CD810018B3B0 /* SearchView.swift */,
 				4DB4D2EE2BE9F11A0018B3B0 /* BookListView.swift */,
+				4DB4D2F42BEA40050018B3B0 /* BookDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,8 +112,18 @@
 				4DB4D2D02BE9CCDF0018B3B0 /* SearchViewController.swift */,
 				4DB4D2EC2BE9F0D20018B3B0 /* BookListViewController.swift */,
 				4DB4D2EA2BE9CF0C0018B3B0 /* TapbarController.swift */,
+				4DB4D2F92BEB20D20018B3B0 /* BookDetailViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		4DB4D2F62BEA449C0018B3B0 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4D2F02BEA31760018B3B0 /* SearchTableViewCell.swift */,
+				4DB4D2F22BEA341F0018B3B0 /* BookListTableViewCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,13 +203,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB4D2F82BEA56490018B3B0 /* NetworkManager.swift in Sources */,
+				4DB4D2F12BEA31760018B3B0 /* SearchTableViewCell.swift in Sources */,
 				4DB4D2D12BE9CCDF0018B3B0 /* SearchViewController.swift in Sources */,
 				4DB4D2EB2BE9CF0C0018B3B0 /* TapbarController.swift in Sources */,
 				4DB4D2CD2BE9CCDF0018B3B0 /* AppDelegate.swift in Sources */,
+				4DB4D2FA2BEB20D20018B3B0 /* BookDetailViewController.swift in Sources */,
+				4DB4D2FC2BEB4AEF0018B3B0 /* BookModel.swift in Sources */,
 				4DB4D2D72BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodeld in Sources */,
 				4DB4D2E42BE9CD810018B3B0 /* SearchView.swift in Sources */,
 				4DB4D2CF2BE9CCDF0018B3B0 /* SceneDelegate.swift in Sources */,
 				4DB4D2ED2BE9F0D20018B3B0 /* BookListViewController.swift in Sources */,
+				4DB4D2F52BEA40050018B3B0 /* BookDetailView.swift in Sources */,
+				4DB4D2F32BEA341F0018B3B0 /* BookListTableViewCell.swift in Sources */,
 				4DB4D2EF2BE9F11A0018B3B0 /* BookListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

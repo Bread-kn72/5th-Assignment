@@ -10,8 +10,10 @@ import SnapKit
 
 class TapbarController: UITabBarController {
     
+    // MARK: - methods
     override func viewDidLoad() {
-        <#code#>
+        setUpVCs()
+        setUpTabBar()
     }
     
     private func setUpTabBar() {
@@ -21,8 +23,8 @@ class TapbarController: UITabBarController {
     
     private func setUpVCs() {
         viewControllers = [
-            createNavController(for: SearchViewController, title: "Search", image: UIImage(systemName: "")!),
-            createNavController(for: <#T##UIViewController#>, title: "Book list", image: UIImage(systemName: "")!)
+            createNavController(for: SearchViewController(), title: "Search", image: UIImage(systemName: "magnifyingglass")!),
+            createNavController(for: BookListViewController(), title: "Book list", image: UIImage(systemName: "book")!)
         ]
     }
     
