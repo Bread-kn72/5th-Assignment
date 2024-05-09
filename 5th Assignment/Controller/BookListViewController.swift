@@ -10,9 +10,7 @@ import CoreData
 
 class BookListViewController: UIViewController {
 
-    // MARK: - properties
-    let bookListView = BookListView()
-    
+    // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
             let container = NSPersistentContainer(name: "Model")
             container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -23,13 +21,18 @@ class BookListViewController: UIViewController {
             return container
         }()
     
+    // MARK: - properties
+    let bookListView = BookListView()
+    
     var containedBooks: [ContainedBook] = []
     
     // MARK: - methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(containedBooks)
         bookListView.bookListTableView.reloadData()
         setUI()
+        addTarget()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,6 +59,31 @@ class BookListViewController: UIViewController {
         } catch {
             print("Failed to fetch saved books: \(error.localizedDescription)")
         }
+    }
+    
+    func addTarget() {
+        bookListView.allDeleteBooks.addTarget(self, action: #selector(allDeleteTapped), for: .touchUpInside)
+    }
+    
+    @objc func allDeleteTapped() {
+        let alert = UIAlertController(title: "전체삭제", message: "전체 삭제하시겠습니까?", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        let ok = UIAlertAction(title: "삭제", style: .default) {_ in 
+            self.containedBooks.removeAll()
+            print(self.containedBooks)
+            self.bookListView.bookListTableView.reloadData()
+//            self.fetchContainedBooks()
+            let finalAlert = UIAlertController(title: nil, message: "전체 삭제되었습니다.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default, handler: { _ in
+                self.dismiss(animated: true)
+            })
+            finalAlert.addAction(okAction)
+            self.present(finalAlert, animated: true)
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        present(alert, animated: true)
     }
 }
 

@@ -10,8 +10,7 @@ import CoreData
 
 class BookDetailViewController: UIViewController {
     
-    // MARK: - properties
-    
+    // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Model")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -21,6 +20,8 @@ class BookDetailViewController: UIViewController {
         })
         return container
     }()
+    
+    // MARK: - properties
     
     var selectedBook: Document? = nil
     
