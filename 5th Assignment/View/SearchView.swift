@@ -45,7 +45,7 @@ class SearchView: UIView {
     }
     
     private func setUI() {
-        self.backgroundColor = .blue
+        self.backgroundColor = .white
     }
     
     private func setConstraints() {

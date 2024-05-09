@@ -46,6 +46,33 @@ class BookDetailView: UIView {
         return bc
     }()
     
+    var flotingStackView: UIStackView = {
+        var fsv = UIStackView()
+        fsv.axis = .horizontal
+        fsv.alignment = .center
+        fsv.distribution = .fillEqually
+        fsv.spacing = 10
+        return fsv
+    }()
+    
+    let exitButton: UIButton = {
+        let eb = UIButton()
+        eb.setTitle("닫기", for: .normal)
+        eb.backgroundColor = .systemGray
+        eb.tintColor = .white
+        eb.layer.cornerRadius = 12
+        return eb
+    }()
+    
+    let saveButton: UIButton = {
+        let sb = UIButton()
+        sb.setTitle("담기", for: .normal)
+        sb.backgroundColor = .systemMint
+        sb.tintColor = .white
+        sb.layer.cornerRadius = 12
+        return sb
+    }()
+    
     // MARK: - methods
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,25 +89,36 @@ class BookDetailView: UIView {
     }
     
     private func setConstraints() {
-        [bookTitle, bookAuthor, bookImageView, bookPrice, bookContents].forEach {
+        [flotingStackView, bookTitle, bookAuthor, bookImageView, bookPrice, bookContents].forEach {
             self.addSubview($0)
         }
         
-        bookTitle.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide)
+        [exitButton, saveButton].forEach {
+            self.flotingStackView.addArrangedSubview($0)
+        }
+        
+        flotingStackView.snp.makeConstraints {
+            $0.bottom.equalTo(safeAreaLayoutGuide)
             $0.leading.equalTo(safeAreaLayoutGuide).offset(20)
             $0.trailing.equalTo(safeAreaLayoutGuide).offset(-20)
             $0.height.equalTo(50)
         }
         
+        bookTitle.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide).offset(5)
+            $0.leading.equalTo(safeAreaLayoutGuide).offset(20)
+            $0.trailing.equalTo(safeAreaLayoutGuide).offset(-20)
+            $0.height.equalTo(40)
+        }
+        
         bookAuthor.snp.makeConstraints {
             $0.top.equalTo(bookTitle.snp.bottom)
             $0.leading.trailing.equalTo(safeAreaLayoutGuide)
-            $0.height.equalTo(30)
+            $0.height.equalTo(20)
         }
         
         bookImageView.snp.makeConstraints {
-            $0.top.equalTo(bookAuthor.snp.bottom).offset(20)
+            $0.top.equalTo(bookAuthor.snp.bottom).offset(10)
             $0.leading.equalTo(safeAreaLayoutGuide).offset(20)
             $0.trailing.equalTo(safeAreaLayoutGuide).offset(-20)
             $0.height.equalTo(400)

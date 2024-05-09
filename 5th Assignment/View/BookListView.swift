@@ -63,7 +63,7 @@ class BookListView: UIView {
     }
     
     private func setUI() {
-        self.backgroundColor = .green
+        self.backgroundColor = .white
     }
     
     private func setConstraints() {

@@ -31,10 +31,10 @@ class TapbarController: UITabBarController {
     private func createNavController(for rootViewController: UIViewController,
                                      title: String,
                                      image: UIImage) -> UIViewController {
-        let navController = UINavigationController(rootViewController: rootViewController)
-        navController.tabBarItem.title = title
-        navController.tabBarItem.image = image
+//        let navController = UINavigationController(rootViewController: rootViewController)
+        rootViewController.tabBarItem.title = title
+        rootViewController.tabBarItem.image = image
 
-        return navController
+        return rootViewController
     }
 }

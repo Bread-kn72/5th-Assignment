@@ -6,10 +6,22 @@
 //
 
 import UIKit
+import CoreData
 
 class BookDetailViewController: UIViewController {
     
     // MARK: - properties
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "Model")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
     var selectedBook: Document? = nil
     
     let bookDetailView = BookDetailView()
@@ -20,6 +32,7 @@ class BookDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI(selectedBook!)
+        addTarget()
     }
     
     override func loadView() {
@@ -52,9 +65,42 @@ class BookDetailViewController: UIViewController {
                 }
             }
         } else {
-            print("Invalid imageURLString")
+            print("imageURLString가 잘못되었다.")
         }
     }
     
+    private func addTarget() {
+        bookDetailView.exitButton.addTarget(self, action: #selector(didTapExitButton), for: .touchUpInside)
+        bookDetailView.saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+    }
     
+    @objc func didTapExitButton() {
+        self.dismiss(animated: true)
+    }
+    
+    @objc func saveButtonTapped() {
+        guard let book = selectedBook else {
+            return
+        }
+        
+        let context = persistentContainer.viewContext
+        let containedBook = ContainedBook(context: context)
+        containedBook.title = book.title
+        containedBook.author = book.authors.first
+        containedBook.price = "\(String(book.price))원"
+        
+        let alert = UIAlertController(title: "완료", message: "책을 담았습니다", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "완료", style: .default) { [weak self] action in
+            self?.dismiss(animated: true)
+        }
+        
+        alert.addAction(ok)
+        
+        present(alert, animated: true)
+        do {
+            try context.save()
+        } catch {
+            
+        }
+    }
 }
