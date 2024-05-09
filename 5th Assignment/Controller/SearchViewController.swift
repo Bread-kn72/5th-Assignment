@@ -43,7 +43,10 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchView.searchResultTableView.deselectRow(at: indexPath, animated: true)
         
+        let selectedBook = bookList[indexPath.row]
+        
         let bookDetailVC = BookDetailViewController()
+        bookDetailVC.selectedBook = selectedBook
         bookDetailVC.modalPresentationStyle = .pageSheet
         present(bookDetailVC, animated: true)
     }
@@ -72,6 +75,4 @@ extension SearchViewController: UISearchBarDelegate {
             }
         }
     }
-    
-    
 }
