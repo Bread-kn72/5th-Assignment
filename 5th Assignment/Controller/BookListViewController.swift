@@ -61,6 +61,12 @@ class BookListViewController: UIViewController {
         }
     }
     
+    func deleteBook() {
+        fetchContainedBooks()
+        
+        
+    }
+    
     func addTarget() {
         bookListView.allDeleteBooks.addTarget(self, action: #selector(allDeleteTapped), for: .touchUpInside)
     }
@@ -69,18 +75,26 @@ class BookListViewController: UIViewController {
         let alert = UIAlertController(title: "전체삭제", message: "전체 삭제하시겠습니까?", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "취소", style: .cancel)
         let ok = UIAlertAction(title: "삭제", style: .default) {_ in 
-            self.containedBooks.removeAll()
-            print(self.containedBooks)
-            self.bookListView.bookListTableView.reloadData()
-//            self.fetchContainedBooks()
-            let finalAlert = UIAlertController(title: nil, message: "전체 삭제되었습니다.", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "확인", style: .default, handler: { _ in
-                self.dismiss(animated: true)
-            })
-            finalAlert.addAction(okAction)
-            self.present(finalAlert, animated: true)
+            let context = self.persistentContainer.viewContext
+            self.fetchContainedBooks()
+            for i in self.containedBooks {
+                context.delete(i)
+            }
+            do {
+                try context.save()
+                
+                self.containedBooks.removeAll()
+                self.bookListView.bookListTableView.reloadData()
+                let finalAlert = UIAlertController(title: nil, message: "전체 삭제되었습니다.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "확인", style: .default, handler: { _ in
+                    self.dismiss(animated: true)
+                })
+                finalAlert.addAction(okAction)
+                self.present(finalAlert, animated: true)
+            } catch {
+                print("전체 삭제에 실패했습니다.")
+            }
         }
-        
         alert.addAction(cancel)
         alert.addAction(ok)
         present(alert, animated: true)
@@ -107,14 +121,18 @@ extension BookListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
         if editingStyle == .delete {
-            
-            containedBooks.remove(at: indexPath.row)
-            bookListView.bookListTableView.deleteRows(at: [indexPath], with: .fade)
-            
+            let context = self.persistentContainer.viewContext
+            let bookToRemove = containedBooks[indexPath.row]
+            context.delete(bookToRemove)
+            do {
+                try context.save()
+                containedBooks.remove(at: indexPath.row)
+                bookListView.bookListTableView.deleteRows(at: [indexPath], with: .fade)
+            } catch {
+                print("한줄 삭제에 실패했습니다.")
+            }
         } else if editingStyle == .insert {
-            
         }
     }
 }

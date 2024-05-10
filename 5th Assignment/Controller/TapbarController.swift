@@ -23,15 +23,12 @@ class TapbarController: UITabBarController {
     
     private func setUpVCs() {
         viewControllers = [
-            createNavController(for: SearchViewController(), title: "Search", image: UIImage(systemName: "magnifyingglass")!),
-            createNavController(for: BookListViewController(), title: "Book list", image: UIImage(systemName: "book")!)
+            createViewController(for: SearchViewController(), title: "Search", image: UIImage(systemName: "magnifyingglass")!),
+            createViewController(for: BookListViewController(), title: "Book list", image: UIImage(systemName: "book")!)
         ]
     }
     
-    private func createNavController(for rootViewController: UIViewController,
-                                     title: String,
-                                     image: UIImage) -> UIViewController {
-//        let navController = UINavigationController(rootViewController: rootViewController)
+    private func createViewController(for rootViewController: UIViewController, title: String, image: UIImage) -> UIViewController {
         rootViewController.tabBarItem.title = title
         rootViewController.tabBarItem.image = image
 
