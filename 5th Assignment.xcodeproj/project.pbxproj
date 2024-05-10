@@ -86,14 +86,9 @@
 				4DB4D2CE2BE9CCDF0018B3B0 /* SceneDelegate.swift */,
 				4DB4D2E92BE9CEF20018B3B0 /* Controller */,
 				4DB4D2E52BE9CD880018B3B0 /* View */,
-				4DB4D2D22BE9CCDF0018B3B0 /* Main.storyboard */,
-				4DB4D2D82BE9CCE00018B3B0 /* Assets.xcassets */,
-				4DB4D2DA2BE9CCE00018B3B0 /* LaunchScreen.storyboard */,
+				4DB4D3002BEDB26A0018B3B0 /* Model */,
+				4DB4D3012BEDB29B0018B3B0 /* Unused */,
 				4DB4D2DD2BE9CCE00018B3B0 /* Info.plist */,
-				4DB4D2D52BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodeld */,
-				4DB4D2F72BEA56490018B3B0 /* NetworkManager.swift */,
-				4DB4D2FB2BEB4AEF0018B3B0 /* BookModel.swift */,
-				4DB4D2FD2BEC72CD0018B3B0 /* Model.xcdatamodeld */,
 			);
 			path = "5th Assignment";
 			sourceTree = "<group>";
@@ -127,6 +122,27 @@
 				4DB4D2F22BEA341F0018B3B0 /* BookListTableViewCell.swift */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		4DB4D3002BEDB26A0018B3B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4D2FB2BEB4AEF0018B3B0 /* BookModel.swift */,
+				4DB4D2FD2BEC72CD0018B3B0 /* Model.xcdatamodeld */,
+				4DB4D2F72BEA56490018B3B0 /* NetworkManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DB4D3012BEDB29B0018B3B0 /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				4DB4D2D22BE9CCDF0018B3B0 /* Main.storyboard */,
+				4DB4D2D82BE9CCE00018B3B0 /* Assets.xcassets */,
+				4DB4D2D52BE9CCDF0018B3B0 /* _th_Assignment.xcdatamodeld */,
+				4DB4D2DA2BE9CCE00018B3B0 /* LaunchScreen.storyboard */,
+			);
+			path = Unused;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,8 +494,7 @@
 				4DB4D2FE2BEC72CD0018B3B0 /* Model.xcdatamodel */,
 			);
 			currentVersion = 4DB4D2FE2BEC72CD0018B3B0 /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = "/Users/kianm/Documents/Swift/개인과제/5th Assignment/5th Assignment/Model.xcdatamodeld";
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

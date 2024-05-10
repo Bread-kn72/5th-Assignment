@@ -35,9 +35,7 @@ class NetworkManager {
                 print("디코딩 실패")
                 return
             }
-            
             completion(bookResult.documents) // completion으로 escaping
-            
         }.resume()
     }
 }

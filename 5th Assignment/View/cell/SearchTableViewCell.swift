@@ -14,7 +14,6 @@ class SearchTableViewCell: UITableViewCell {
     
     let titleLabel: UILabel = {
         let tl = UILabel()
-        
         return tl
     }()
     

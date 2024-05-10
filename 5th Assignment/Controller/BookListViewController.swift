@@ -29,10 +29,8 @@ class BookListViewController: UIViewController {
     // MARK: - methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(containedBooks)
-        bookListView.bookListTableView.reloadData()
         setUI()
-        addTarget()
+        addTargets()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,14 +59,9 @@ class BookListViewController: UIViewController {
         }
     }
     
-    func deleteBook() {
-        fetchContainedBooks()
-        
-        
-    }
-    
-    func addTarget() {
+    func addTargets() {
         bookListView.allDeleteBooks.addTarget(self, action: #selector(allDeleteTapped), for: .touchUpInside)
+        bookListView.addBook.addTarget(self, action: #selector(addBooks), for: .touchUpInside)
     }
     
     @objc func allDeleteTapped() {
@@ -92,17 +85,24 @@ class BookListViewController: UIViewController {
                 finalAlert.addAction(okAction)
                 self.present(finalAlert, animated: true)
             } catch {
-                print("전체 삭제에 실패했습니다.")
+                print("전체 삭제에 실패했습니다: \(error.localizedDescription)")
             }
         }
         alert.addAction(cancel)
         alert.addAction(ok)
         present(alert, animated: true)
     }
+    
+    @objc func addBooks() {
+        let alert = UIAlertController(title: "미구현", message: "아직 미구현입니다.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .cancel)
+        
+        alert.addAction(ok)
+        present(alert, animated: true)
+    }
 }
 
 // MARK: - extensions
-
 extension BookListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return containedBooks.count
@@ -130,7 +130,7 @@ extension BookListViewController: UITableViewDataSource {
                 containedBooks.remove(at: indexPath.row)
                 bookListView.bookListTableView.deleteRows(at: [indexPath], with: .fade)
             } catch {
-                print("한줄 삭제에 실패했습니다.")
+                print("한줄 삭제에 실패했습니다: \(error.localizedDescription)")
             }
         } else if editingStyle == .insert {
         }
